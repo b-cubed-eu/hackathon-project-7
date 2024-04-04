@@ -33,3 +33,4 @@ dependencies:
       - jupytext
       - nbgitpuller
       - mystmd
+      - mgrs
