@@ -1,0 +1,38 @@
+{
+  "http://purl.org/dc/elements/1.1/identifier": "example_identifier",
+  "http://purl.org/dc/terms/description": "Example description",
+  "http://purl.org/dc/terms/creator": "My Name",
+  "https://schema.org/roleName": "Researcher",
+  "http://purl.org/dc/terms/created": ["2022-04-04"],
+  "http://purl.org/dc/terms/license": "CC-BY-SA",
+  "http://rs.tdwg.org/eco/terms/verbatimSiteDescriptions": "Example site description",
+  "siteCode": "ABC123",
+  "stationCode": "123XYZ",
+  "http://rs.tdwg.org/eco/terms/protocolNames": ["Protocol A", "Protocol B"],
+  "http://rs.tdwg.org/eco/terms/protocolReferences": ["Ref A", "Ref B"],
+  "http://rs.tdwg.org/eco/terms/isVegetationCoverReported": true,
+  "http://rs.tdwg.org/eco/terms/targetHabitatScope": "Forest",
+  "http://rs.tdwg.org/eco/terms/eventDurationValue": 5,
+  "http://rs.tdwg.org/eco/terms/eventDurationUnit": "hours",
+  "dataCubes": [
+    {
+      "cubeIdentifier": "cube1",
+      "description": "Example data cube 1",
+      "datasets": ["dataset1", "dataset2"],
+      "relatedCubes": [
+        {
+          "cubeIdentifier": "relatedCube1",
+          "relationship": "Spatially correlated"
+        }
+      ],
+      "observedProperties": {
+        "name": "Near-surface air temperature",
+        "uri": "http://vocabs.lter-europe.net/EnvThes/30334",
+        "property": "Temperature",
+        "https://w3id.org/iadopt/ont/hasObjectOfInterest": "et:23",
+        "https://w3id.org/iadopt/ont/hasProperty": "et:21514",
+        "https://w3id.org/iadopt/ont/hasConstraint": "et:3304"
+      }
+    }
+  ]
+}
