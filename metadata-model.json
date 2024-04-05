@@ -1,58 +1,166 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Datacube Metadata",
-  "type": "object",
-  "properties": {
-    "http://purl.org/dc/elements/1.1/identifier": { "type": "string", "comment": "Identifier for the datacube." },
-    "http://purl.org/dc/terms/description": { "type": "string", "comment": "Description of the dataset." },
-    "http://purl.org/dc/terms/creator": { "type": "string", "comment": "Creator of the dataset." },
-    "https://schema.org/roleName": { "type": "string", "comment": "Role name." },
-    "http://purl.org/dc/terms/created": { "type": "array", "items": { "type": "string" }, "comment": "Creation date(s) of the datacube." },
-    "http://purl.org/dc/terms/license": { "type": "string", "comment": "License information." },
-    "http://rs.tdwg.org/eco/terms/verbatimSiteDescriptions": { "type": "string", "comment": "Verbatim site descriptions." },
-    "siteCode": { "type": "string", "comment": "Site code." }, 
-    "stationCode": { "type": "string", "comment": "Station code." }, 
-    "http://rs.tdwg.org/eco/terms/protocolNames": { "type": "array", "items": { "type": "string" }, "comment": "Protocol names." },
-    "http://rs.tdwg.org/eco/terms/protocolReferences": { "type": "array", "items": { "type": "string" }, "comment": "Protocol references." },
-    "http://rs.tdwg.org/eco/terms/isVegetationCoverReported": { "type": "boolean", "comment": "Flag indicating whether vegetation cover is reported." },
-    "http://rs.tdwg.org/eco/terms/targetHabitatScope": { "type": "string", "comment": "Target habitat scope." },
-    "http://rs.tdwg.org/eco/terms/eventDurationValue": { "type": "number", "comment": "Event duration value." },
-    "http://rs.tdwg.org/eco/terms/eventDurationUnit": { "type": "string", "comment": "Event duration unit." },
-    "dataCubes": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "cubeIdentifier": { "type": "string", "comment": "Identifier for the data cube." },
-          "description": { "type": "string", "comment": "Description of the data cube." },
-          "datasets": {
-            "type": "array",
-            "items": { "type": "string", "comment": "Identifiers of the datasets included in this cube." }
-          },
-          "relatedCubes": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Datacube Metadata",
+    "type": "object",
+    "properties": {
+        "http://purl.org/dc/elements/1.1/identifier": {
+            "type": "string",
+            "comment": "Identifier for the datacube."
+        },
+        "http://purl.org/dc/terms/description": {
+            "type": "string",
+            "comment": "Description of the dataset."
+        },
+        "http://purl.org/dc/terms/creator": {
+            "type": "string",
+            "comment": "Creator of the dataset."
+        },
+        "https://schema.org/roleName": {
+            "type": "string",
+            "comment": "Role name."
+        },
+        "http://purl.org/dc/terms/created": {
             "type": "array",
             "items": {
-              "type": "object",
-              "properties": {
-                "cubeIdentifier": { "type": "string", "comment": "Identifier for the related data cube." },
-                "relationship": { "type": "string", "comment": "Description of the relationship between this cube and the related cube." }
-              },
-              "required": ["cubeIdentifier", "relationship"]
-            }
-          }
+                "type": "string"
+            },
+            "comment": "Creation date(s) of the datacube."
         },
-        "required": ["cubeIdentifier", "datasets"]
-      }
-    }
-  },
-  "required": [
-    "http://purl.org/dc/elements/1.1/identifier",
-    "http://purl.org/dc/terms/description",
-    "http://purl.org/dc/terms/creator",
-    "http://purl.org/dc/terms/created",
-    "http://rs.tdwg.org/eco/terms/verbatimSiteDescriptions",
-    "http://rs.tdwg.org/eco/terms/protocolNames",
-    "http://rs.tdwg.org/eco/terms/isVegetationCoverReported",
-    "dataCubes"
-  ]
+        "http://purl.org/dc/terms/license": {
+            "type": "string",
+            "comment": "License information."
+        },
+        "http://rs.tdwg.org/eco/terms/verbatimSiteDescriptions": {
+            "type": "string",
+            "comment": "Verbatim site descriptions."
+        },
+        "siteCode": {
+            "type": "string",
+            "comment": "Site code."
+        },
+        "stationCode": {
+            "type": "string",
+            "comment": "Station code."
+        },
+        "http://rs.tdwg.org/eco/terms/protocolNames": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "comment": "Protocol names."
+        },
+        "http://rs.tdwg.org/eco/terms/protocolReferences": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "comment": "Protocol references."
+        },
+        "http://rs.tdwg.org/eco/terms/isVegetationCoverReported": {
+            "type": "boolean",
+            "comment": "Flag indicating whether vegetation cover is reported."
+        },
+        "http://rs.tdwg.org/eco/terms/targetHabitatScope": {
+            "type": "string",
+            "comment": "Target habitat scope."
+        },
+        "http://rs.tdwg.org/eco/terms/eventDurationValue": {
+            "type": "number",
+            "comment": "Event duration value."
+        },
+        "http://rs.tdwg.org/eco/terms/eventDurationUnit": {
+            "type": "string",
+            "comment": "Event duration unit."
+        },
+        "dataCubes": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "cubeIdentifier": {
+                        "type": "string",
+                        "comment": "Identifier for the data cube."
+                    },
+                    "description": {
+                        "type": "string",
+                        "comment": "Description of the data cube."
+                    },
+                    "datasets": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "comment": "Identifiers of the datasets included in this cube."
+                        }
+                    },
+                    "relatedCubes": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "cubeIdentifier": {
+                                    "type": "string",
+                                    "comment": "Identifier for the related data cube."
+                                },
+                                "relationship": {
+                                    "type": "string",
+                                    "comment": "Description of the relationship between this cube and the related cube."
+                                }
+                            },
+                            "required": [
+                                "cubeIdentifier",
+                                "relationship"
+                            ]
+                        }
+                    },
+                    "observedProperties": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string",
+                                "comment": "Name of the observed property."
+                            },
+                            "uri": {
+                                "type": "string",
+                                "comment": "URI of the observed property."
+                            },
+                            "property": {
+                                "type": "string",
+                                "comment": "Property related to the observed property."
+                            },
+                            "https://w3id.org/iadopt/ont/hasObjectOfInterest": {
+                                "type": "string",
+                                "comment": "Object of interest related to the observed property."
+                            },
+                            "https://w3id.org/iadopt/ont/hasProperty": {
+                                "type": "string",
+                                "comment": "Constraints related to the observed property."
+                            },
+                            "https://w3id.org/iadopt/ont/hasConstraint": {
+                                "type": "string",
+                                "comment": "Property related to the observed property."
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "uri"
+                        ]
+                    }
+                },
+                "required": [
+                    "cubeIdentifier",
+                    "datasets"
+                ]
+            }
+        }
+    },
+    "required": [
+        "http://purl.org/dc/elements/1.1/identifier",
+        "http://purl.org/dc/terms/description",
+        "http://purl.org/dc/terms/creator",
+        "http://purl.org/dc/terms/created",
+        "http://rs.tdwg.org/eco/terms/verbatimSiteDescriptions",
+        "http://rs.tdwg.org/eco/terms/protocolNames",
+        "http://rs.tdwg.org/eco/terms/isVegetationCoverReported",
+        "dataCubes"
+    ]
 }
