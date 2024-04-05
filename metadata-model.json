@@ -117,11 +117,13 @@
                         "properties": {
                             "name": {
                                 "type": "string",
-                                "comment": "Name of the observed property."
+                                "comment": "Name of the observed property.",
+                                "example": "near-surface air temperate" 
                             },
                             "uri": {
                                 "type": "string",
-                                "comment": "URI of the observed property."
+                                "comment": "URI of the observed property.",
+                                "comment": "http://vocabs.lter-europe.net/EnvThes/30334"
                             },
                             "property": {
                                 "type": "string",
@@ -129,15 +131,18 @@
                             },
                             "https://w3id.org/iadopt/ont/hasObjectOfInterest": {
                                 "type": "string",
-                                "comment": "Object of interest related to the observed property."
+                                "comment": "Object of interest related to the observed property.",
+                                "example": "et:23"
                             },
                             "https://w3id.org/iadopt/ont/hasProperty": {
                                 "type": "string",
-                                "comment": "Constraints related to the observed property."
+                                "comment": "Constraints related to the observed property.",
+                                "example": "et:21514"
                             },
                             "https://w3id.org/iadopt/ont/hasConstraint": {
                                 "type": "string",
-                                "comment": "Property related to the observed property."
+                                "comment": "Property related to the observed property.",
+                                "example": "et:3304"
                             }
                         },
                         "required": [
