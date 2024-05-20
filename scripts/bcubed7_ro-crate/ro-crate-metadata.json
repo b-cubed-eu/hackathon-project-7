@@ -17,6 +17,24 @@
                     "@id": "weather_data_2005.xlsx"
                 },
                 {
+                    "@type": "SoftwareSourceCode",
+                    "description": "Jupyter notebook for wrangling bird data",
+                    "name": "birds.ipynb",
+                    "url":"https://github.com/b-cubed-eu/hackathon-project-7/blob/main/scripts/birds.ipynb"
+                },
+                {
+                    "@type": "SoftwareSourceCode",
+                    "description": "Jupyter notebook for wrangling vegetation data",
+                    "name": "vegetatation_wrangle.ipynb",
+                    "url": "https://github.com/b-cubed-eu/hackathon-project-7/blob/main/scripts/vegetatation_wrangle.ipynb"
+                },
+                {
+                    "@type": "SoftwareSourceCode",
+                    "description": "Jupyter notebook for wrangling weather data",
+                    "name": "weather.ipynb",
+                    "url": "https://github.com/b-cubed-eu/hackathon-project-7/blob/main/scripts/weather.ipynb"
+                },
+                {
                     "@id": "#GBIF-DOI"
                 }
             ],
